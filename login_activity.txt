@@ -1,0 +1,20 @@
+ID: 1 User_Name: test logged in successfully at 02:39 PM CDT 08/14/2021 America/Chicago
+ID: 2 User_Name: admin logged in successfully at 02:45 PM CDT 08/14/2021 America/Chicago
+User_Name: test failed to login at 01:15 PM CST 11/15/2022 America/Chicago
+User_Name: user failed to login at 01:16 PM CST 11/15/2022 America/Chicago
+User_Name: user failed to login at 01:21 PM CST 11/15/2022 America/Chicago
+User_Name: test failed to login at 01:21 PM CST 11/15/2022 America/Chicago
+User_Name: test failed to login at 01:21 PM CST 11/15/2022 America/Chicago
+User_Name: admin failed to login at 01:23 PM CST 11/15/2022 America/Chicago
+User_Name: admin failed to login at 01:23 PM CST 11/15/2022 America/Chicago
+User_Name: admin failed to login at 01:23 PM CST 11/15/2022 America/Chicago
+User_Name: admin failed to login at 01:23 PM CST 11/15/2022 America/Chicago
+User_Name: admin failed to login at 01:23 PM CST 11/15/2022 America/Chicago
+User_Name: admin failed to login at 08:24 PM CST 02/25/2023 America/Chicago
+User_Name: admin failed to login at 08:25 PM CST 02/25/2023 America/Chicago
+User_Name: admin failed to login at 08:25 PM CST 02/25/2023 America/Chicago
+User_Name: admin failed to login at 08:25 PM CST 02/25/2023 America/Chicago
+User_Name: test failed to login at 08:26 PM CST 02/25/2023 America/Chicago
+User_Name: test failed to login at 08:26 PM CST 02/25/2023 America/Chicago
+User_Name: test failed to login at 08:26 PM CST 02/25/2023 America/Chicago
+User_Name: test failed to login at 08:26 PM CST 02/25/2023 America/Chicago

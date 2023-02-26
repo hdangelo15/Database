@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainMenu_Controller">
+   <children>
+      <VBox prefHeight="850.0" prefWidth="1000.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="35.0" prefWidth="940.0" text="User Scheduling">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="30.0" top="30.0" />
+               </VBox.margin>
+            </Label>
+            <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="940.0" spacing="650.0">
+               <children>
+                  <Label text="CUSTOMERS">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" top="30.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="200.0" prefWidth="940.0">
+               <children>
+                  <TableView fx:id="customersTableView" prefHeight="200.0" prefWidth="940.0">
+                    <columns>
+                      <TableColumn fx:id="customerIDCol" prefWidth="120.0" text="ID" />
+                      <TableColumn fx:id="customerNameCol" prefWidth="140.0" text="Name" />
+                        <TableColumn fx:id="customerAddressCol" prefWidth="200.0" sortable="false" text="Address" />
+                        <TableColumn fx:id="customerPostalCodeCol" prefWidth="120.0" text="Postal Code" />
+                        <TableColumn fx:id="customerPhoneCol" prefWidth="120.0" sortable="false" text="Phone" />
+                        <TableColumn fx:id="customerDivisionCol" prefWidth="120.0" text="Division" />
+                        <TableColumn fx:id="customerCountryCol" prefWidth="120.0" text="Country" />
+                    </columns>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </TableView>
+               </children>
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" top="15.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="27.0" prefWidth="940.0" spacing="30.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#onActionUpdateCustomer" prefWidth="100.0" text="Edit" />
+                  <Button mnemonicParsing="false" onAction="#onActionAddNewCustomer" prefWidth="100.0" text="Add New" />
+                  <Button mnemonicParsing="false" onAction="#onActionDeleteCustomer" prefWidth="100.0" text="Delete" />
+                  <Button mnemonicParsing="false" onAction="#onActionViewCustomerAppointments" text="Customer Schedule" />
+               </children>
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="40.0" layoutY="105.0" prefHeight="35.0" prefWidth="940.0" spacing="20.0">
+               <children>
+                  <Label text="APPOINTMENTS">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="datePickerFilter" prefHeight="25.0" prefWidth="195.0" promptText="Choose a date to filter by...">
+                     <HBox.margin>
+                        <Insets left="250.0" />
+                     </HBox.margin>
+                  </DatePicker>
+                  <RadioButton fx:id="weekViewRadio" mnemonicParsing="false" selected="true" text="Week View">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="filterToggle" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="monthViewRadio" mnemonicParsing="false" text="Month View" toggleGroup="$filterToggle" />
+                  <Button mnemonicParsing="false" onAction="#onActionFilterAppointments" text="Filter" />
+                  <Button mnemonicParsing="false" onAction="#onActionResetTable" text="Reset" />
+               </children>
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" top="50.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="40.0" layoutY="155.0" prefHeight="200.0" prefWidth="940.0">
+               <children>
+                  <TableView fx:id="appointmentsTableView" prefHeight="200.0" prefWidth="940.0">
+                     <columns>
+                        <TableColumn fx:id="appointmentIDCol" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="appointmentTitleCol" prefWidth="125.0" text="Title" />
+                        <TableColumn fx:id="appointmentDescCol" prefWidth="130.0" text="Description" />
+                        <TableColumn fx:id="appointmentLocationCol" prefWidth="100.0" text="Location" />
+                        <TableColumn fx:id="appointmentContactCol" prefWidth="100.0" text="Contact" />
+                        <TableColumn fx:id="appointmentTypeCol" prefWidth="100.0" text="Type" />
+                        <TableColumn fx:id="appointmentStartCol" prefWidth="110.0" text="Start" />
+                        <TableColumn fx:id="appointmentEndCol" prefWidth="110.0" text="End" />
+                        <TableColumn fx:id="appointmentCustomerCol" prefWidth="90.0" text="Customer ID" />
+                     </columns>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </TableView>
+               </children>
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" top="15.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="40.0" layoutY="375.0" prefHeight="27.0" prefWidth="940.0" spacing="30.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#onActionUpdateAppointment" prefWidth="100.0" text="Edit" />
+                  <Button mnemonicParsing="false" onAction="#onActionAddNewAppointment" prefWidth="100.0" text="Add New" />
+                  <Button mnemonicParsing="false" onAction="#onActionDeleteAppointment" prefWidth="100.0" text="Delete" />
+                  <Button mnemonicParsing="false" onAction="#onActionViewContactSchedules" text="Contact Schedules" />
+                  <Button mnemonicParsing="false" onAction="#onActionAppointmentReports" text="Appointment Reports" />
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#onActionExitProgram" prefWidth="150.0" text="Sign Out">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
